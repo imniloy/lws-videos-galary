@@ -4,7 +4,9 @@ import VideoLoader from './../ui/loaders/VideoLoader';
 import Error from './../ui/Error';
 
 export default function Videos() {
-    const { data: videos, isLoading, isError } = useGetVideosQuery();
+    const { data: videos, isLoading, isError } = useGetVideosQuery(undefined, {
+        skip: false
+    });
 
     let content = null;
     if (isLoading) {

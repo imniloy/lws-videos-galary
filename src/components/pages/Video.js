@@ -6,11 +6,13 @@ import RelatedVideos from "../video/related/RelatedVideos";
 import PlayerLoader from './../ui/loaders/PlayerLoader';
 import DescriptionLoader from './../ui/loaders/DescriptionLoader';
 import Error from "../ui/Error";
+import RelatedVideoLoader from './../ui/loaders/RelatedVideoLoader';
 
 export default function Video() {
     const { videoId } = useParams();
     const { data: video, isLoading, isError } = useGetVideoQuery(videoId);
-    const { link, id } = video || {};
+    const { link, id, title } = video || {};
+
     let content = null;
     if (isLoading) {
         content = <>
@@ -19,14 +21,13 @@ export default function Video() {
         </>
     };
 
-    if (!isLoading && isError) {
-        content = <Error message="There is and Error" />
-    };
+    if (!isLoading && isError) content = <Error message="There is and Error" />
+
 
     if (!isLoading && !isError && id) {
         content =
             <>
-                <Player videoLink={link}/>
+                <Player videoLink={link} />
                 <Description video={video} />
             </>
     };
@@ -39,7 +40,18 @@ export default function Video() {
                         {content}
                     </div>
 
-                    <RelatedVideos />
+                    {video?.id ?
+                        (
+                            <RelatedVideos id={id} title={title} />
+                        )
+                        : isLoading ?
+                            <>
+                                <RelatedVideoLoader />
+                                <RelatedVideoLoader />
+                                <RelatedVideoLoader />
+                            </>
+                            : isError && <Error message="There is an error" />
+                    }
                 </div>
             </div>
         </section>
