@@ -7,9 +7,11 @@
       "author": "Learn with Sumit",
       "date": "May 10, 2022",
       "duration": "10:12",
-      "views": "2.1k",
+      "views": "2.4k",
       "link": "https://www.youtube-nocookie.com/embed/6O4s7v28nlw",
-      "thumbnail": "https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg"
+      "thumbnail": "https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg",
+      "videoLink": "https://www.youtube-nocookie.com/embed/6O4s7v28nlw",
+      "thumbnailLink": "https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg"
     },
     {
       "id": 2,
@@ -31,7 +33,9 @@
       "duration": "10:12",
       "views": "2.1k",
       "link": "https://www.youtube-nocookie.com/embed/4M7D3O2XX4o",
-      "thumbnail": "https://i3.ytimg.com/vi/4M7D3O2XX4o/maxresdefault.jpg"
+      "thumbnail": "https://i3.ytimg.com/vi/4M7D3O2XX4o/maxresdefault.jpg",
+      "videoLink": "https://www.youtube-nocookie.com/embed/4M7D3O2XX4o",
+      "thumbnailLink": "https://i3.ytimg.com/vi/4M7D3O2XX4o/maxresdefault.jpg"
     },
     {
       "id": 4,

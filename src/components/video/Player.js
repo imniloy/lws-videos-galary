@@ -1,5 +1,6 @@
 export default function Player({ videoLink }) {
-    console.log(videoLink);
+    // console.log(videoLink);
+    // console.log(video);
     return (
         <iframe
             width="100%"

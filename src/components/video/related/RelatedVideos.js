@@ -5,7 +5,7 @@ import RelatedVideoLoader from "../../ui/loaders/RelatedVideoLoader";
 
 export default function RelatedVideos({ id, title }) {
     const { data: videos, isLoading, isError } = useGetRelatedVideosQuery({ id, title });
-    console.log(isError)
+    // console.log(isError)
     let content = null;
     if (isLoading) <RelatedVideoLoader />;
     if (!isLoading && isError) content = <Error message="There is and Error" />

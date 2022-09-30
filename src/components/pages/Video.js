@@ -12,6 +12,7 @@ export default function Video() {
     const { videoId } = useParams();
     const { data: video, isLoading, isError } = useGetVideoQuery(videoId);
     const { link, id, title } = video || {};
+    // console.log(video);
 
     let content = null;
     if (isLoading) {
