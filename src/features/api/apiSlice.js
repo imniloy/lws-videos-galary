@@ -69,4 +69,5 @@ export const {
   useGetRelatedVideosQuery,
   useAddVideoMutation,
   useEditVideoMutation,
+  useDeleteVideoMutation,
 } = apiSlice;
